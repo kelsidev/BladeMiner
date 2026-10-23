@@ -1,0 +1,405 @@
+[gd_scene format=3 uid="uid://no5j5yntqrso"]
+
+[ext_resource type="Script" uid="uid://dgmqsux52blhg" path="res://scripts/hud.gd" id="1_ahhtf"]
+[ext_resource type="Texture2D" uid="uid://c0tw54pk6sh2t" path="res://sprites/rock.png" id="2_oo0fn"]
+[ext_resource type="FontFile" uid="uid://b577yyeipwr6" path="res://fonts/montserrat.bold.ttf" id="3_5ysmq"]
+[ext_resource type="PackedScene" uid="uid://dhcdbas68h8y7" path="res://scenes/UpgradeCard.tscn" id="4_6fi6k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0i1j5"]
+bg_color = Color(0.07058824, 0.078431375, 0.10980392, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 25.0
+expand_margin_right = 25.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oo0fn"]
+bg_color = Color(0, 0, 0, 0.48235294)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ahhtf"]
+bg_color = Color(0.19413805, 0.7629274, 0.999999, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.5423108, 0.84455454, 0.9999998, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6fi6k"]
+bg_color = Color(0.05490196, 0.078431375, 0.11764706, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.16862746, 0.24313726, 0.33333334, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uo2fv"]
+bg_color = Color(0.03137255, 0.047058824, 0.07058824, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.101960786, 0.14117648, 0.2, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_047uy"]
+bg_color = Color(0, 0.35686275, 0.61960787, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1.732707e-06, 0.44138998, 0.7580579, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5pdws"]
+bg_color = Color(2.5990605e-06, 0.45714575, 0.78386474, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hd3ao"]
+bg_color = Color(0, 0.41011435, 0.7068303, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5n1hp"]
+bg_color = Color(0.08235294, 0.07450981, 0.101960786, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 1
+border_color = Color(1.353256, 0.8926054, 0.19116017, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mphia"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.49878418, 0.4987843, 0.49878395, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0m4u7"]
+bg_color = Color(0.6, 0.6, 0.6, 0.23137255)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.49878418, 0.4987843, 0.49878395, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_apjy4"]
+bg_color = Color(0, 0, 0, 0.15686275)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.49878418, 0.4987843, 0.49878395, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Hud" type="CanvasLayer" unique_id=499984905]
+script = ExtResource("1_ahhtf")
+
+[node name="HUD" type="PanelContainer" parent="." unique_id=1335939043]
+texture_filter = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -396.0
+offset_right = 396.0
+offset_bottom = 66.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0i1j5")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD" unique_id=1744951723]
+layout_mode = 2
+theme_override_constants/separation = 153
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HUD/HBoxContainer" unique_id=342443927]
+layout_mode = 2
+
+[node name="Rocks" type="Label" parent="HUD/HBoxContainer/VBoxContainer2" unique_id=1011853102]
+custom_minimum_size = Vector2(0, 64.665)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("3_5ysmq")
+text = "  Осталось камней: "
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/HBoxContainer" unique_id=1267451296]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="LevelProgress_Label" type="Label" parent="HUD/HBoxContainer/VBoxContainer" unique_id=1644447000]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("3_5ysmq")
+text = "{level}"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelProgress" type="ProgressBar" parent="HUD/HBoxContainer/VBoxContainer" unique_id=1260282742]
+custom_minimum_size = Vector2(150, 20)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_oo0fn")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ahhtf")
+value = 50.0
+rounded = true
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="HUD/HBoxContainer" unique_id=132861504]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Money" type="Label" parent="HUD/HBoxContainer/VBoxContainer3" unique_id=722272685]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("3_5ysmq")
+text = "Монет: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Damage" type="Label" parent="HUD/HBoxContainer/VBoxContainer3" unique_id=771147776]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("3_5ysmq")
+text = "Урон: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelCompleteUI" type="CenterContainer" parent="." unique_id=1738530390]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainPanel" type="PanelContainer" parent="LevelCompleteUI" unique_id=534029620]
+custom_minimum_size = Vector2(450, 297.465)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6fi6k")
+
+[node name="MarginContainer" type="MarginContainer" parent="LevelCompleteUI/MainPanel" unique_id=1155725269]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LevelCompleteUI/MainPanel" unique_id=39931103]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TitleLabel" type="Label" parent="LevelCompleteUI/MainPanel/VBoxContainer" unique_id=8648643]
+custom_minimum_size = Vector2(0, 85.07)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_5ysmq")
+theme_override_font_sizes/font_size = 32
+text = "Уровень пройден!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="LevelCompleteUI/MainPanel/VBoxContainer" unique_id=1229300772]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_right = 8
+
+[node name="StatsPanel" type="PanelContainer" parent="LevelCompleteUI/MainPanel/VBoxContainer/MarginContainer" unique_id=807832188]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_uo2fv")
+
+[node name="StatsGrid" type="VBoxContainer" parent="LevelCompleteUI/MainPanel/VBoxContainer/MarginContainer/StatsPanel" unique_id=2097974195]
+layout_mode = 2
+
+[node name="RocksDestroyed" type="HBoxContainer" parent="LevelCompleteUI/MainPanel/VBoxContainer/MarginContainer/StatsPanel/StatsGrid" unique_id=346251602]
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="LevelCompleteUI/MainPanel/VBoxContainer/MarginContainer/StatsPanel/StatsGrid/RocksDestroyed" unique_id=791003352]
+layout_mode = 2
+texture = ExtResource("2_oo0fn")
+
+[node name="TextLabel" type="Label" parent="LevelCompleteUI/MainPanel/VBoxContainer/MarginContainer/StatsPanel/StatsGrid/RocksDestroyed" unique_id=1566710079]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_5ysmq")
+text = "Камней уничтожено:"
+
+[node name="ValueLabel" type="Label" parent="LevelCompleteUI/MainPanel/VBoxContainer/MarginContainer/StatsPanel/StatsGrid/RocksDestroyed" unique_id=1773827220]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_5ysmq")
+text = "37"
+horizontal_alignment = 2
+
+[node name="MoneyGet" type="HBoxContainer" parent="LevelCompleteUI/MainPanel/VBoxContainer/MarginContainer/StatsPanel/StatsGrid" unique_id=2081495480]
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="LevelCompleteUI/MainPanel/VBoxContainer/MarginContainer/StatsPanel/StatsGrid/MoneyGet" unique_id=470377794]
+layout_mode = 2
+texture = ExtResource("2_oo0fn")
+
+[node name="TextLabel" type="Label" parent="LevelCompleteUI/MainPanel/VBoxContainer/MarginContainer/StatsPanel/StatsGrid/MoneyGet" unique_id=2051466688]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_5ysmq")
+text = "Монет получено:"
+
+[node name="ValueLabel" type="Label" parent="LevelCompleteUI/MainPanel/VBoxContainer/MarginContainer/StatsPanel/StatsGrid/MoneyGet" unique_id=933506659]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_5ysmq")
+text = "1250"
+horizontal_alignment = 2
+
+[node name="ContinueButton" type="Button" parent="LevelCompleteUI/MainPanel/VBoxContainer" unique_id=1982678359]
+custom_minimum_size = Vector2(220, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_5ysmq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_047uy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5pdws")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hd3ao")
+text = "ПРОДОЛЖИТЬ"
+
+[node name="UpgradeScreen" type="Control" parent="." unique_id=127057644]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainPanel" type="Panel" parent="UpgradeScreen" unique_id=1851943435]
+texture_filter = 1
+custom_minimum_size = Vector2(900, 480)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5n1hp")
+
+[node name="ContentMargin" type="MarginContainer" parent="UpgradeScreen/MainPanel" unique_id=559042206]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 32
+
+[node name="MainVBox" type="VBoxContainer" parent="UpgradeScreen/MainPanel/ContentMargin" unique_id=690183121]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="TitleCenter" type="CenterContainer" parent="UpgradeScreen/MainPanel/ContentMargin/MainVBox" unique_id=1309647290]
+layout_mode = 2
+
+[node name="TitleHBox" type="HBoxContainer" parent="UpgradeScreen/MainPanel/ContentMargin/MainVBox/TitleCenter" unique_id=1569606741]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="OrnamentLeft" type="TextureRect" parent="UpgradeScreen/MainPanel/ContentMargin/MainVBox/TitleCenter/TitleHBox" unique_id=181790888]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="UpgradeScreen/MainPanel/ContentMargin/MainVBox/TitleCenter/TitleHBox" unique_id=1589550259]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9411765, 0.9490196, 0.9607843, 1)
+theme_override_fonts/font = ExtResource("3_5ysmq")
+theme_override_font_sizes/font_size = 34
+text = "ВЫБРАТЬ УЛУЧШЕНИЕ"
+horizontal_alignment = 1
+
+[node name="OrnamentRight" type="TextureRect" parent="UpgradeScreen/MainPanel/ContentMargin/MainVBox/TitleCenter/TitleHBox" unique_id=307364641]
+layout_mode = 2
+
+[node name="CardHBox" type="HBoxContainer" parent="UpgradeScreen/MainPanel/ContentMargin/MainVBox" unique_id=934014536]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_constants/separation = 24
+
+[node name="UpgradeCard" parent="UpgradeScreen/MainPanel/ContentMargin/MainVBox/CardHBox" unique_id=417720010 instance=ExtResource("4_6fi6k")]
+layout_mode = 2
+
+[node name="UpgradeCard2" parent="UpgradeScreen/MainPanel/ContentMargin/MainVBox/CardHBox" unique_id=1634019837 instance=ExtResource("4_6fi6k")]
+layout_mode = 2
+
+[node name="UpgradeCard3" parent="UpgradeScreen/MainPanel/ContentMargin/MainVBox/CardHBox" unique_id=1172968579 instance=ExtResource("4_6fi6k")]
+layout_mode = 2
+
+[node name="RerollCenter" type="CenterContainer" parent="UpgradeScreen/MainPanel/ContentMargin/MainVBox" unique_id=1763176387]
+layout_mode = 2
+
+[node name="ActionsHBox" type="HBoxContainer" parent="UpgradeScreen/MainPanel/ContentMargin/MainVBox/RerollCenter" unique_id=1824830658]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="RerollButton" type="Button" parent="UpgradeScreen/MainPanel/ContentMargin/MainVBox/RerollCenter/ActionsHBox" unique_id=335402475]
+custom_minimum_size = Vector2(180, 44)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_5ysmq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mphia")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0m4u7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_apjy4")
+text = "⟲ REROLL (1)"
+
+[node name="SkipButton" type="Button" parent="UpgradeScreen/MainPanel/ContentMargin/MainVBox/RerollCenter/ActionsHBox" unique_id=714608939]
+custom_minimum_size = Vector2(180, 44)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_5ysmq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mphia")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0m4u7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_apjy4")
+text = "ПРОПУСТИТЬ"
+
+[connection signal="pressed" from="LevelCompleteUI/MainPanel/VBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="UpgradeScreen/MainPanel/ContentMargin/MainVBox/RerollCenter/ActionsHBox/RerollButton" to="." method="_on_reroll_button_pressed"]
+[connection signal="pressed" from="UpgradeScreen/MainPanel/ContentMargin/MainVBox/RerollCenter/ActionsHBox/SkipButton" to="." method="_on_skip_button_pressed"]

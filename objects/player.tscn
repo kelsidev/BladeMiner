@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://dpot25yy1g360"]
+
+[ext_resource type="Texture2D" uid="uid://c70j4qrh1h76s" path="res://sprites/player.png" id="1_eqqp1"]
+[ext_resource type="Script" uid="uid://gxkj1ub0j01h" path="res://scripts/player.gd" id="1_ykyjo"]
+[ext_resource type="Texture2D" uid="uid://bbg5whsdxgk5m" path="res://sprites/playerhealthbar_under.png" id="3_nmc1l"]
+[ext_resource type="Texture2D" uid="uid://dy05ogdu8h0g6" path="res://sprites/playerhealthbar_fill.png" id="4_f46kd"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_nmc1l"]
+polygon = PackedVector2Array(-9, -2, -9, -5, -10, -5, -10, -8, -8, -8, -8, -7, -6, -7, -6, -8, -5, -8, -5, -10, -4, -10, -4, -11, -3, -11, -3, -12, -2, -12, -2, -9, 0, -9, 0, -10, 2, -10, 2, -11, 4, -11, 4, -9, 3, -9, 3, -8, 4, -8, 4, -7, 5, -7, 5, -8, 11, -8, 11, -6, 10, -6, 10, -5, 9, -5, 9, -4, 8, -4, 8, -2, 9, -2, 9, -1, 10, -1, 10, 0.5, 11, 1, 11, 2, 12, 2, 12, 5, 9, 5, 9, 4, 7, 4, 7, 7, 8, 7, 8, 10, 7, 10, 7, 9, 4, 9, 4, 8, 2, 8, 2, 11, -1, 11, -1, 10, -2, 10, -2, 9, -3, 9, -3, 8, -5, 8, -5, 9, -6.5, 9, -7, 9, -7, 10, -8, 10, -8, 4, -9, 4, -9, 2, -10, 2, -10, 3, -13, 3, -13, 0, -12, 0, -12, -1, -11, -1, -11, -2)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bxedw"]
+radius = 13.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ykyjo"]
+radius = 13.0
+
+[sub_resource type="Gradient" id="Gradient_nmc1l"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_f46kd"]
+gradient = SubResource("Gradient_nmc1l")
+fill = 1
+fill_from = Vector2(0.5, 0.4)
+fill_to = Vector2(0.2, 0.2)
+
+[node name="Player" type="CharacterBody2D" unique_id=668687911]
+scale = Vector2(2, 2)
+script = ExtResource("1_ykyjo")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=231619086]
+occluder = SubResource("OccluderPolygon2D_nmc1l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=734015792]
+shape = SubResource("CircleShape2D_bxedw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=522633180]
+texture_filter = 1
+texture = ExtResource("1_eqqp1")
+offset = Vector2(-1, 2)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1389286708]
+position = Vector2(-1, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1080063707]
+position = Vector2(1, -2)
+shape = SubResource("CircleShape2D_ykyjo")
+
+[node name="HealTimer" type="Timer" parent="." unique_id=1060296828]
+autostart = true
+
+[node name="HealthBar" type="TextureProgressBar" parent="." unique_id=1590826517]
+texture_filter = 1
+offset_left = -26.0
+offset_top = -21.0
+offset_right = 21.0
+offset_bottom = -13.0
+value = 100.0
+texture_under = ExtResource("3_nmc1l")
+texture_progress = ExtResource("4_f46kd")
+texture_progress_offset = Vector2(16, 1)
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=985655644]
+position = Vector2(-1.1920929e-07, 0)
+energy = 0.5
+texture = SubResource("GradientTexture2D_f46kd")
+
+[connection signal="timeout" from="HealTimer" to="." method="_on_heal_timer_timeout"]
